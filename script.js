@@ -1,7 +1,14 @@
-const container = document.getElementsByClassName('country-container');
+// **Selecting elements**
+
+onst container = document.getElementsByClassName('country-container');
 const searchbartxt = document.getElementById('search-input');
 
+// **Global variable for all countries data**
+
 let allconuntries = [];
+
+// **Function to fetch and display all countries**
+
 allCountries();
 function allCountries(){
     fetch('./data.json')
@@ -16,12 +23,16 @@ function allCountries(){
         }).catch(error => console.error('Error fetching data:', error)); 
 }
     
+// **Function to handle saved mode on page load**
+
 function callmode(){
     const savedMode = localStorage.getItem('mode');
     if (savedMode) {
         applymode(savedMode);
     }
 }
+
+// **Function to create a country card element**
 
 function display(data){
 
@@ -47,6 +58,8 @@ function display(data){
     return countryanchor2;            
 }
 
+// **Selecting elements for mode change**
+
 const modebtn = document.getElementById('modebtn');
 const modetxt = document.getElementById('modetxt');
 
@@ -60,19 +73,16 @@ function modechange(){
         localStorage.setItem('mode', 'light');
     }
 }
+
+// **Selecting elements for region selection**
+
     const selectField = document.getElementById('selectField');
     const selectText = document.getElementById('selectText');
     const options = document.getElementsByClassName('options');
     const list = document.getElementById('list');
     const icon = document.getElementById('icon');
 
-
-    // icon.onblur = closelist;
-    // selectText.onblur = closelist;
-    // function closelist(){
-    //     list.classList.add('heightchange');
-    //     icon.classList.remove('rotate');
-    // }
+// **Function to apply light/dark mode styles**
 
 function applymode(mode){
 
@@ -83,9 +93,7 @@ function applymode(mode){
     const contrycard = document.getElementsByClassName('country-card');
     const bolds = document.getElementsByTagName('b');
     const p = document.getElementsByTagName('p');
-    const searchbar = document.getElementsByClassName('search-bar')[0];
-    
-    
+    const searchbar = document.getElementsByClassName('search-bar')[0];  
 
     if(mode === 'dark'){
         modebtn.setAttribute('class', 'fa-solid fa-sun');
@@ -143,6 +151,8 @@ function applymode(mode){
     }
 }
 
+
+// **Event listener for region selection**
 for(option of options){
     option.onclick = function(){
         searchbartxt.value=''; 

@@ -58,50 +58,92 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+## Project Learning Summary
 
-To see how you can add code snippets, see below:
+### HTML:
+I learned about the `tabindex` attribute, which allows non-focusable HTML elements like `div`, `p`, and `i` to receive focus. Although I encountered some issues and didn't implement it in this project, understanding its usage has expanded my knowledge.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<p id="selectText" tabindex="0">Select the region</p>
+<i id="icon" tabindex="1" class="fa-solid fa-caret-down"></i>
 ```
+
+### CSS:
+I created a responsive navigation bar. When set to `position: fixed`, it behaves like `position: absolute`, exiting the normal document flow. To manage its size, I set `width: 100%` and `max-width: inherit`, ensuring it stays within the container's width. I also applied a `z-index` to prevent background content from overlapping the navigation bar, especially when cards scale on hover.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: white;
+    padding: 2% 4%;
+    width: 100%;
+    max-width: inherit;
+    margin-inline: auto;
+    position: fixed;
+    box-shadow: 0 0 10px rgb(194, 192, 192);
+    top:0%;
+    z-index:9999;
 }
 ```
+
+### JavaScript:
+1. **Theme Consistency:**
+   I implemented a consistent light/dark theme across the website using local storage. The selected theme (`light` or `dark`) is stored in local storage, and JavaScript checks this value on page load to apply the appropriate theme.
+
+2. **Handling History Navigation:**
+   I discovered that using the `history.back()` function restores the previous content without reloading the page, which means page load events don’t execute. To address this, I used the `pageshow` event, which triggers when the page is shown, even from the cache. This allowed me to reapply the current theme when the user navigates back to previous pages.
+
+3. **Query Processing:**
+   I explored and implemented query processing in JavaScript.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+document.addEventListener('DOMContentLoaded', ()=>{
+    if(backbtn2){
+        let modepresence = localStorage.getItem('mode')
+        if(modepresence){
+            applymode(modepresence);
+        }
+    }
+})
+
+<button id="backbtn" onclick="history.back()"><i id="icon" class="fa-solid fa-arrow-left"></i>&nbsp&nbspBack</button>
+
+window.addEventListener('pageshow', () => {
+    let modepresence = localStorage.getItem('mode');
+    if (modepresence) {
+        applymode(modepresence);
+    }
+});
+
+const querystr = window.location.search;
+const params = new URLSearchParams(querystr);
+var countryname = params.get('countryName');
+
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+## Continued Development
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+### Mobile-First Design:
+In future projects, I will adopt a mobile-first design approach to ensure optimal responsiveness. This means starting with styles for mobile devices and progressively enhancing the layout for larger screens.
+
+### Blur Event on Custom Select List:
+I encountered an issue when applying the blur event to a custom select list using the `tabindex` attribute. Although I succeeded in making the list open and close, clicking on the options no longer triggered the desired actions, such as filtering data. I will work on resolving this issue in future projects.
+
+### Code Optimization:
+For upcoming projects, I will focus on writing minimal, clean, and efficient code. This involves removing redundant code, improving code structure, and adhering to best practices for maintainable and scalable code.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - A comprehensive resource for web developers with detailed documentation on HTML, CSS, and JavaScript. It provided clear explanations and examples that helped me understand and implement advanced features like responsive design and JavaScript event handling effectively.
 
 ## Author
 
@@ -111,6 +153,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I would like to acknowledge the following resources and communities that have supported and contributed to my learning journey during the development of this project:
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+MDN Web Docs: The comprehensive documentation on HTML, CSS, and JavaScript provided valuable insights and examples that greatly assisted in implementing advanced features.
+
+Frontend Mentor: Completing challenges on Frontend Mentor significantly enhanced my frontend development skills by exposing me to industry best practices and real-world design implementations.
+
