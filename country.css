@@ -10,13 +10,12 @@ body{
 }
 header{
     background-color: white;
-    box-shadow: 0 0 8px rgb(211, 210, 210);
 }
 #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 75px;
     background-color: white;
     padding: 2% 4%;
     width: 100%;
@@ -24,6 +23,8 @@ header{
     margin-inline: auto;
     position: fixed;
     top: 0%; 
+    margin-bottom: 5vh;
+    box-shadow: 0 0 8px rgb(211, 210, 210);
 }
 #themebtn{
     display: flex;
@@ -74,7 +75,7 @@ main{
     align-items: center;
     justify-content: center;
     padding: 10px 40px;
-    margin-block: 5vh;
+    margin-block: 7vh;
     transition: all 0.25s;
     border-radius: 5px;
     border: none;
@@ -156,7 +157,7 @@ main{
     }
     #backbtn{
         padding: 7px 25px;
-        margin: 3.5vh 4vw;
+        margin: 6vh 4vw 2vh;
     }
     #flag{
         width: 90%;
