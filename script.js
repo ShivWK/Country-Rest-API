@@ -1,6 +1,6 @@
 // **Selecting elements**
 
-onst container = document.getElementsByClassName('country-container');
+const container = document.getElementsByClassName('country-container');
 const searchbartxt = document.getElementById('search-input');
 
 // **Global variable for all countries data**
