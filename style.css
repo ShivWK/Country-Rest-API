@@ -131,7 +131,6 @@ input{
     width: 200px;
     z-index: 999;  
     position: relative;
-    /* right: 0%; */
 }
 #selectField{
     width: 100%;
