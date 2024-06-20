@@ -141,12 +141,17 @@ I encountered an issue when applying the blur event to a custom select list usin
 ### Code Optimization:
 For upcoming projects, I will focus on writing minimal, clean, and efficient code. This involves removing redundant code, improving code structure, and adhering to best practices for maintainable and scalable code.
 
-### Useful resources
+### Lazy Loading with Intersection Observer API
+In future projects, I plan to implement the Intersection Observer API to enable lazy loading of content. By loading elements like country cards only when they come into the viewport, I can reduce initial load times and save bandwidth. This approach will enhance efficiency, minimize resource usage, and provide a smoother, more responsive user experience.
 
+### Useful resources
 - [MDN Web Docs](https://developer.mozilla.org/en-US/) - A comprehensive resource for web developers with detailed documentation on HTML, CSS, and JavaScript. It provided clear explanations and examples that helped me understand and implement advanced features like responsive design and JavaScript event handling effectively.
 
-## Author
 
+
+
+## Author
+- Shivendra Dwivedi
 - Frontend Mentor - [@ShivWK](https://www.frontendmentor.io/profile/ShivWK)
 - Twitter - [@Shivendrawk](https://www.twitter.com/Shivendrawk)
 
