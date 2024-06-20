@@ -48,7 +48,7 @@ function display(data){
     countryanchor2.innerHTML= `<div class="country-card">
                     <img src=${data.flag} alt="flag" /> 
                     <div class="inside-card">
-                        <h3>${data.name}</h3>
+                        <h2>${data.name}</h2>
                         <p><b>Population: </b>${data.population}</p>
                         <p><b>Region: </b>${data.region}</p>
                         <p><b>Capital: </b>${capitalCity}</p>
@@ -124,8 +124,8 @@ function applymode(mode){
        
         modebtn.setAttribute('class', 'fa-regular fa-moon') 
         modetxt.innerText= 'Dark Mode';
-        main.style.backgroundColor = 'hsl(0, 5%, 92%)';
-        body.style.backgroundColor = 'hsl(0, 5%, 92%)';
+        main.style.backgroundColor = 'hsl(0, 0%, 98%)';
+        body.style.backgroundColor = 'hsl(0, 0%, 98%)';
         header.style.backgroundColor = 'white';
         insideheader.style.boxShadow = '0 0 8px rgb(211, 210, 210)';
         insideheader.style.backgroundColor = 'white';

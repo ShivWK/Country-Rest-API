@@ -10,27 +10,31 @@ a{
 }
 body{
     scroll-behavior: smooth;
-    background-color: hsl(0, 12%, 98%);
+    background-color: hsl(0, 0%, 98%);
 }
 body::-webkit-scrollbar-track{
     display: hidden;
 }
 header{
     box-shadow: 0 0 10px rgb(194, 192, 192);
+    position: fixed;
+    top:0%;
+    width: 100%;
+    z-index:9999;
+    max-width: inherit;
 }
 #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    height: 70px;
     background-color: white;
     padding: 2% 4%;
     width: 100%;
     max-width: inherit;
     margin-inline: auto;
-    position: fixed;
-    box-shadow: 0 0 10px rgb(194, 192, 192);
-    top:0%;
+    position: absolute;
+    box-shadow: 0 0 10px rgb(194, 192, 192);   
     z-index:9999;
 }
 #themebtn{
@@ -38,9 +42,6 @@ header{
     align-items: center;
     justify-content: space-between;
     gap: 5px;
-}
-#themebtn{
-    cursor: pointer;
 }
 main{
     max-width: 1280px;
@@ -87,9 +88,9 @@ a{
 }  
 #headspan{
     transition: all 0.25s;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 4px 8px;
-    box-shadow: 0 0 10px rgb(202, 201, 201);
+    box-shadow: 0 0 8px rgb(202, 201, 201);
     user-select: none;
 }
 #headspan:hover{
@@ -114,7 +115,7 @@ input{
     padding: 5px 10px;
     border: none;
     outline: none; 
-    font-size: 12px;
+    font-size: 16px;
     background-color: transparent;
 }
 .search-bar{
@@ -130,11 +131,11 @@ input{
     width: 200px;
     z-index: 999;  
     position: relative;
-    right: 0%;
+    /* right: 0%; */
 }
 #selectField{
     width: 100%;
-    padding: 10px 20px;
+    padding: 12px 20px;
     margin-bottom:4px;
     background:rgba(255, 255, 255);
     border-radius: 6px;
@@ -160,7 +161,6 @@ ul{
     width: 100%;
     background-color: rgba(255, 255, 255);
     border-radius: 6px;
-    /* overflow: hidden; */
     transition: all 0.5s;
     user-select: none;
     z-index: 999;
@@ -192,7 +192,7 @@ i{
 }
 @media only screen and (max-width:675px){
     #header{
-        font-size: 14px;
+        font-size: 12px;
     }
     .country-card{
        width: 100%;
@@ -202,30 +202,27 @@ i{
         width:82%;
         margin-inline: auto;
         height: 348px;
-        margin-top: 1.5vh;
-        margin-bottom: 0.5vh;
-    }
-    .bar{
         margin-top: 1vh;
+        margin-bottom: 0.5vh;
     }
     #selector{
         width: 160px;
         margin-right: 4%;
-        top:135px;
-        left: 4%;
     }
     #selectField{
-        padding: 9px 10px;
+        padding: 6px 10px;
     }
     .country-container{
-        margin-top: 9vh;
+        margin-top: 2vh;
     }
     .bar{
         margin-top: 2vh;
+        flex-direction: column;
+        gap: 15px;
     }
     .search-bar{
         width: 100%;
-        padding: 6px 10px;        
+        padding: 5px 10px;        
     }
     input{
         padding: 5px 10px;

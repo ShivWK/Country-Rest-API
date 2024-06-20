@@ -6,7 +6,7 @@
 }
 body{
     scroll-behavior: smooth;
-    background-color: hsl(0, 5%, 92%);
+    background-color: hsl(0, 0%, 98%);
 }
 header{
     background-color: white;
@@ -16,7 +16,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    height: 80px;
     background-color: white;
     padding: 2% 4%;
     width: 100%;
@@ -24,9 +24,6 @@ header{
     margin-inline: auto;
     position: fixed;
     top: 0%; 
-}
-#heading{
-    font-weight: 800;
 }
 #themebtn{
     display: flex;
@@ -96,7 +93,6 @@ main{
 }
 #icon{
     transition: transform 0.25s;
-   
 }
 #backbtn:hover #icon{
     transform: translateX(-5px);
