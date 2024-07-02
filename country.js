@@ -78,6 +78,7 @@ var countryname = params.get('countryName');
                             if (savedMode) {
                                 applymode(savedMode);
                             }
+                            dispnone();
                 })
                 .catch(error => console.error('Error in fetching data:', error));
             } else {
@@ -159,6 +160,10 @@ var countryname = params.get('countryName');
                     }
                 }
             }
+
+function dispnone(){
+    document.getElementById('progress-bar').style.display='none';
+}
 
 //applyng event listener on the document when it loads
 document.addEventListener('DOMContentLoaded', ()=>{

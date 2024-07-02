@@ -1,5 +1,7 @@
 // **Selecting elements**
 
+console.log(document.getElementById('search-input').getAttribute('myname'));
+
 const container = document.getElementsByClassName('country-container');
 const searchbartxt = document.getElementById('search-input');
 
@@ -19,7 +21,9 @@ function allCountries(){
         const countryanchor1= display(element)
         container[0].append(countryanchor1);
         callmode();
+        
             })
+            dispnone();
         }).catch(error => console.error('Error fetching data:', error)); 
 }
     
@@ -32,6 +36,9 @@ function callmode(){
     }
 }
 
+function dispnone(){
+    document.getElementById('progress-bar').style.display='none';
+}
 // **Function to create a country card element**
 
 function display(data){
@@ -197,7 +204,7 @@ function countriesonsearch(){
         let newsearcheddata = allconuntries.filter((country)=>country.name.toLowerCase().startsWith(value.toLowerCase()));
         container[0].innerHTML = '';
         if(newsearcheddata.length==0){
-            container[0].innerHTML=`<p style="margin:280px auto 0; ">No data found</p>`;
+            container[0].innerHTML=`<p style="margin:280px auto 0; ">No data match the search</p>`;
         }else{
             newsearcheddata.forEach((data)=>{
                const getsearched = display(data);
