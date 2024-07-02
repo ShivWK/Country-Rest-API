@@ -169,7 +169,7 @@ main{
     background-color: #aca9a8;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px #aca9a8;
-    animation: Anime-1 1.5s linear infinite;
+    animation: Anime-1 2s linear infinite;
 }
 .loader-2{
     color: white;
