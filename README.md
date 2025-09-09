@@ -48,8 +48,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/ShivWK/Country-Rest-API.git)
-- Live Site URL: [Add live site URL here](https://worldrestapi.netlify.app/)
+- Solution URL: [github](https://github.com/ShivWK/Country-Rest-API.git)
+- Live Site URL: [Live Site](https://worldrestapi.netlify.app/)
 
 ## My process
 
